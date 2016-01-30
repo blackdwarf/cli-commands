@@ -24,21 +24,15 @@ namespace DotnetApiSearch
             
             var client = new HttpClient();
             var url = String.Format("{0}?searchTerm={1}", apiUrl, query.ToLowerInvariant());
-            // Console.WriteLine(url);
             var json = client.GetStringAsync(url).Result;
             Console.WriteLine(json);
-            // var searchResults = ParseResults(json);
-            // Console.WriteLine(searchResults.Count);
-            // var jsonr = JArray.Parse(result);
-            // Console.WriteLine(jsonr[0]);
             var searchResults = JsonConvert.DeserializeObject<List<SearchResult>>(json);
-            // Console.WriteLine(searchResults.ToString());
             if (searchResults.Count > 0)
             {
                 writer.WriteSuccess($"{searchResults.Count} results found:");
                 foreach (var item in searchResults) 
                 {
-                    Console.WriteLine($"\t{item.PackageDetails.Name}");
+                    DisplayResult(item);
                 }
             } else 
             {
@@ -50,6 +44,18 @@ namespace DotnetApiSearch
         {
             // throw new NotImplementedException();
             Console.WriteLine("Use the Force, Luke!");
+        }
+        
+        private static void DisplayResult(SearchResult item)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"\t{item.PackageDetails.Name} ({item.PackageDetails.Version})");
+            Console.WriteLine($"\t\tFound in type {item.FullTypeName}");
+            if (item.Tfms.Length > 0)
+            {
+                Console.WriteLine("\t\tIn framework(s) {0}", String.Join(", ", item.Tfms));
+            }
+            Console.WriteLine();
         }
         
         

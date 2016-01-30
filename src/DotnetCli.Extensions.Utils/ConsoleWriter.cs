@@ -16,7 +16,7 @@ namespace DotnetCli.Extensions.Utils
         {
             WriteMessage(message, ConsoleColor.Green);
         }
-
+        
         private void WriteMessage(string message, ConsoleColor color)
         {
             Console.ForegroundColor = color;

@@ -1,4 +1,6 @@
 ﻿{
+    "name": "dotnet-api-search",
+    "description": "Command that uses the Package Search service to search for a given API.",
     "version": "1.0.0-*",
     "compilationOptions": {
         "emitEntryPoint": true
