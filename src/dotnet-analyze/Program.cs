@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Fx.Portability;
 
 namespace ConsoleApplication
 {

@@ -5,11 +5,7 @@
     },
 
     "dependencies": {
-        "NETStandard.Library": "1.0.0-rc3-23727",
-        "dotnet-api-search": { 
-            "version": "1.0.0", 
-            "target": "package" 
-        }
+        "NETStandard.Library": "1.0.0-rc3-23727"
     },
     
     "tools": {

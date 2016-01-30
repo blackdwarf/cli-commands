@@ -6,8 +6,9 @@
 
     "dependencies": {
         "NETStandard.Library": "1.0.0-rc2-23704",
-        "Microsoft.Fx.Portability": "1.3.0-alpha-00038"
-    },
+        "Microsoft.Fx.Portability": "1.3.0-alpha-00038",
+        "Microsoft.Dotnet.Cli.Utils": "1.0.0-*"
+     },
 
     "frameworks": {
         "dnxcore50": { }
