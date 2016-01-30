@@ -13,8 +13,7 @@
         "System.Dynamic.Runtime": "4.0.11-rc2-*",
         "System.Runtime.Serialization.Primitives": "4.1.0-rc2-*",
         "System.Xml.XmlDocument": "4.0.1-rc2-*",
-        "System.Xml.XDocument": "4.0.11-rc2-*",
-        "DotnetCli.Extensions.Utils": ""
+        "System.Xml.XDocument": "4.0.11-rc2-*"
     },
 
     "frameworks": {

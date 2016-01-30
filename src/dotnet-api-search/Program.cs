@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using DotnetCli.Extensions.Utils;
 
 namespace DotnetApiSearch
 {
@@ -25,7 +24,6 @@ namespace DotnetApiSearch
             var client = new HttpClient();
             var url = String.Format("{0}?searchTerm={1}", apiUrl, query.ToLowerInvariant());
             var json = client.GetStringAsync(url).Result;
-            Console.WriteLine(json);
             var searchResults = JsonConvert.DeserializeObject<List<SearchResult>>(json);
             if (searchResults.Count > 0)
             {

@@ -1,0 +1,25 @@
+{
+    "version": "1.0.0-*",
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+
+    "dependencies": {
+        "NETStandard.Library": "1.0.0-rc3-23727",
+        "dotnet-api-search": { 
+            "version": "1.0.0", 
+            "target": "package" 
+        }
+    },
+    
+    "tools": {
+        "dotnet-api-search": { 
+            "version": "1.0.0", 
+            "target": "package" 
+        }
+    },
+
+    "frameworks": {
+        "dnxcore50": { }
+    }
+}
