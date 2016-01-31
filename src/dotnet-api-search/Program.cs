@@ -40,8 +40,10 @@ namespace DotnetApiSearch
 
         private static void ShowHelp()
         {
-            // throw new NotImplementedException();
-            Console.WriteLine("Use the Force, Luke!");
+            Console.WriteLine("Usage: dotnet api-search <query>");
+            Console.WriteLine();
+            Console.WriteLine("Options:");
+            Console.WriteLine("\t<query>:\tMandatory, the api to search for");
         }
         
         private static void DisplayResult(SearchResult item)
@@ -55,32 +57,5 @@ namespace DotnetApiSearch
             }
             Console.WriteLine();
         }
-        
-        
-        // private static List<SearchResult> ParseResults(string json)
-        // {
-        //     List<SearchResult> results = new List<SearchResult>();
-        //     
-        //     var jarray = JArray.Parse(json);
-        //     if (jarray.Count == 0)
-        //     {
-        //         return results;
-        //     }
-        //     foreach (var item in jarray)
-        //     {
-        //         results.Add(new SearchResult {
-        //             PackageDetails = new PackageDetails 
-        //             {
-        //                 Name = item["PackageDetails"]["Name"].ToString(),
-        //                 Version = item["PackageDetails"]["Version"].ToString()
-        //             },
-        //             FullTypeName = item["FullTypeName"].ToString(),
-        //             Tfms = item["Tfms"].ToObject<string[]>()
-        //         });
-        //     }
-        //     
-        //     return results;
-        // }
-        // 
     }
 }
